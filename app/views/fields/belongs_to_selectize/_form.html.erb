@@ -1,0 +1,16 @@
+<div class="field-unit__label">
+  <%= f.label field.permitted_attribute %>
+</div>
+<div class="field-unit__field">
+  <% if field.remote? %>
+    <%= f.select field.permitted_attribute, {}, {}, data: field.html_data do %>
+      <% if field.selected_option %>
+        <%= options_for_select [[field.display_associated_resource, field.selected_option]], field.selected_option %>
+      <% end %>
+    <% end %>
+  <% else %>
+    <%= f.select field.permitted_attribute, {}, {}, data: field.html_data do %>
+      <%= options_for_select field.associated_resource_options, field.selected_option %>
+    <% end %>
+  <% end %>
+</div>
