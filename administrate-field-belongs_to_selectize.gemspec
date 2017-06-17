@@ -4,7 +4,7 @@ $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 
 Gem::Specification.new do |spec|
   spec.name          = "administrate-field-belongs_to_selectize"
-  spec.version       = "0.1.0"
+  spec.version       = "0.1.1"
   spec.authors       = ["Patricio Mac Adden"]
   spec.email         = ["patriciomacadden@gmail.com"]
 
@@ -32,5 +32,5 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency "rake", "~> 10.0"
   spec.add_development_dependency "rspec", "~> 3.0"
 
-  spec.add_runtime_dependency "administrate", "~> 0.5.0"
+  spec.add_runtime_dependency "administrate", "~> 0.5"
 end
