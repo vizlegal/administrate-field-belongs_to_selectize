@@ -2,7 +2,7 @@ $(function() {
   $belongsToSelectize = $(".field-unit--belongs-to-selectize select");
   var data = $belongsToSelectize.data();
 
-  if (data["remote"] === true) {
+  if (data && data["remote"] === true) {
     data["load"] = function(query, callback) {
       if (!query.length) return callback();
 
