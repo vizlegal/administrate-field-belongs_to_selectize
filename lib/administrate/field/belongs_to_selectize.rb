@@ -14,6 +14,7 @@ module Administrate
       def html_data
         selectize_options.tap do |data|
           data[:params] = params
+          data[:search_param] = search_param
           data[:remote] = remote?
           data[:url] = url if url.present?
         end
@@ -27,6 +28,10 @@ module Administrate
 
       def params
         options.fetch :params, {}
+      end
+
+      def search_param
+        options.fetch :search_param, {}
       end
 
       def selectize_options
