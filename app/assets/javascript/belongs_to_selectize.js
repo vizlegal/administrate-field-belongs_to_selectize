@@ -6,7 +6,7 @@ $(function() {
     data["load"] = function(query, callback) {
       if (!query.length) return callback();
 
-      var q = data["search_param"] || "q";
+      var q = data["searchParam"] || "q";
       data["params"][q] = query;
 
       $.getJSON(data["url"], data["params"])
